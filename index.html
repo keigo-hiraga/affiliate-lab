@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvo - 本当に使えるものだけ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #FAFAF8;
+            color: #1A1A1A;
+            line-height: 1.7;
+        }
+
+        /* header */
+        header {
+            padding: 24px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #EFEFEF;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+
+        .logo span { color: #7DBE8A; }
+
+        nav a {
+            margin-left: 32px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav a:hover { color: #7DBE8A; }
+
+        /* hero */
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+            background: linear-gradient(160deg, #F7FBF8 0%, #FFF9F5 100%);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #E8F5EC;
+            color: #4A9B5F;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(26px, 4vw, 48px);
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            color: #777;
+            max-width: 460px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* cards */
+        .section {
+            padding: 80px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 36px;
+            letter-spacing: 1px;
+        }
+
+        .section-title span { color: #7DBE8A; }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #EFEFEF;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background: #F5F5F3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #CCC;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .card-body { padding: 24px; }
+
+        .card-tag {
+            font-size: 10px;
+            font-weight: 700;
+            color: #7DBE8A;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.7;
+        }
+
+        /* footer */
+        footer {
+            margin-top: 60px;
+            padding: 40px;
+            border-top: 1px solid #EFEFEF;
+            text-align: center;
+            font-size: 12px;
+            color: #AAA;
+        }
+
+        footer a {
+            color: #AAA;
+            text-decoration: none;
+            margin: 0 14px;
+        }
+
+        footer a:hover { color: #7DBE8A; }
+
+        footer .copy { margin-top: 16px; }
+
+        /* responsive */
+        @media (max-width: 600px) {
+            header { padding: 20px; }
+            nav { display: none; }
+            .hero { padding: 80px 20px; }
+            .section { padding: 60px 20px; }
+            footer { padding: 32px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="logo" href="/">HAR<span>VO</span></a>
+    <nav>
+        <a href="#">レビュー</a>
+        <a href="#">カテゴリ</a>
+        <a href="#">について</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-tag">Curated Picks</div>
+    <h1>本当に使えるものだけを、<br>正直に届ける。</h1>
+    <p>Harvoは実際に試して良かったモノ・サービスだけを紹介するキュレーションサイトです。</p>
+</section>
+
+<section class="section">
+    <div class="section-title">新着 <span>レビュー</span></div>
+    <div class="cards">
+        <div class="card">
+            <div class="card-img">IMAGE</div>
+            <div class="card-body">
+                <div class="card-tag">Category</div>
+                <h3>記事タイトルがここに入ります</h3>
+                <p>記事の概要テキスト。読者に価値を伝える一文をここに書きます。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">IMAGE</div>
+            <div class="card-body">
+                <div class="card-tag">Category</div>
+                <h3>記事タイトルがここに入ります</h3>
+                <p>記事の概要テキスト。読者に価値を伝える一文をここに書きます。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">IMAGE</div>
+            <div class="card-body">
+                <div class="card-tag">Category</div>
+                <h3>記事タイトルがここに入ります</h3>
+                <p>記事の概要テキスト。読者に価値を伝える一文をここに書きます。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">お問い合わせ</a>
+        <a href="#">運営者情報</a>
+    </div>
+    <div class="copy">© 2026 Harvo. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
