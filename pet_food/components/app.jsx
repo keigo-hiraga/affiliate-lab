@@ -4,7 +4,7 @@ function App() {
   const [tweaks, setTweak] = useTweaks(window.__TWEAK_DEFAULTS);
 
   const onCta = () => {
-    alert("ご購入ページへ遷移します（デモ）");
+    window.open("https://px.a8.net/svt/ejp?a8mat=4B1U9Y+5R6VAQ+5GX6+HUKPU&a8ejpredirect=https%3A%2F%2Ffhfood.shop-pro.jp%2F%3Fpid%3D178947462", "_blank", "noopener");
   };
 
   // テーマ切替
@@ -63,6 +63,9 @@ function App() {
       </div>
 
       {tweaks.showSticky && <StickyCta ctaText={tweaks.ctaText} onCta={onCta} />}
+
+      {/* a8.net トラッキングピクセル */}
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1U9Y+5R6VAQ+5GX6+HUKPU" alt="" />
 
       <TweaksPanel title="Tweaks">
         <TweakSection title="テーマ">
